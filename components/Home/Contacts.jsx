@@ -17,7 +17,7 @@ import Link from "next/link";
 const Contacts = () => {
   return (
     <motion.div
-      id="contacts"
+      id="contact"
       className="relative flex min-h-screen flex-col  bg-[#020617] overflow-hidden px-8 text-gray-200 "
     >
       <div className="h-[10vh]"></div>
