@@ -127,7 +127,7 @@ const Projects = () => {
               ? "open"
               : "closed"
           }
-          className={`flex flex-col h-[75vh]  hover:bg-[#12182b] transition duration-300 ease-in-out    pt-4 font-normal items-center  `}
+          className={`flex flex-col h-[73vh] hover:bg-[#12182b] transition duration-300 ease-in-out    pt-4 font-normal items-center  `}
         >
           <Link
             href={project.link}
@@ -204,7 +204,7 @@ const Projects = () => {
               ? "open"
               : "closed"
           }
-          className={`flex flex-col h-[75vh] hover:bg-[#12182b] transition duration-300 ease-in-out  pt-4 font-normal items-center  `}
+          className={`flex flex-col h-[73vh] hover:bg-[#12182b] transition duration-300 ease-in-out  pt-4 font-normal items-center  `}
         >
           <Link
             href={project.link}
