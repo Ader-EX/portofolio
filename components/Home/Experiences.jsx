@@ -67,7 +67,7 @@ const Experience = () => {
     >
       <div className="flex flex-col sm:flex-row gap-4 mt-[20rem] ">
         <div className="z-1 flex flex-col items-start">
-          <h1 className="flex max-w-2xl gap-x-2 font-bold bg-gradient-to-br from-white to-gray-400 bg-clip-text text-3xl leading-tight text-transparent sm:text-5xl sm:leading-tight md:text-7xl md:leading-tight">
+          <h1 className="flex max-w-2xl gap-x-2 font-bold text-white text-3xl leading-tight text-transparent sm:text-5xl sm:leading-tight md:text-7xl md:leading-tight">
             Experiences
             <FiArrowUpRight className="max-w-2xl text-white transition-transform hover:rotate-90" />
           </h1>

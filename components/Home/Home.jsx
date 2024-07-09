@@ -94,7 +94,7 @@ const NewHome = () => {
     >
       {" "}
       <div className="relative z-1 flex flex-col items-start">
-        <h1 className="max-w-3xl font-bold flex gap-x-2 mb-4 bg-gradient-to-br from-white to-gray-400 bg-clip-text  text-3xl leading-tight text-transparent sm:text-5xl sm:leading-tight md:text-7xl md:leading-tight">
+        <h1 className="max-w-3xl font-bold flex gap-x-2 mb-4 text-white  text-3xl leading-tight text-transparent sm:text-5xl sm:leading-tight md:text-7xl md:leading-tight">
           Welcome To My <br /> Web Portofolio
           <FiArrowUpRight className="transition-transform max-w-3xl text-white hover:rotate-90 " />
         </h1>
