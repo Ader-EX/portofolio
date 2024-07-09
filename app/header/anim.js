@@ -62,15 +62,15 @@ export const backgroundTwo = {
   open: {
     height: "100vh",
     transition: {
-      ...transition, // Spread existing transition properties
-      delay: 0.5, // Add a delay of 0.5 seconds
+      ...transition,
+      delay: 0.5,
     },
   },
   closed: {
     height: 0,
     transition: {
-      ...transition, // Spread existing transition properties
-      delay: 0.5, // Add a delay of 0.5 seconds
+      ...transition,
+      delay: 0.5,
     },
   },
 };

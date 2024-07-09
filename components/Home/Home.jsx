@@ -15,7 +15,6 @@ import { Tulpen_One } from "next/font/google";
 const shrikhand = Shrikhand({ subsets: ["latin"], weight: ["400"] });
 const tulpen_One = Tulpen_One({ subsets: ["latin"], weight: ["400"] });
 
-// Single Falling Star Component
 const FallingStar = ({ initialX, delay }) => {
   const duration = Math.random() * 10 + 20;
   return (
@@ -45,7 +44,6 @@ const FallingStars = ({ count = 70 }) => {
   const [initialPositions, setInitialPositions] = useState([]);
 
   useEffect(() => {
-    // Calculate initial positions after component mounts
     const positions = Array.from({ length: count }).map((_, index) => ({
       initialX: (window.innerWidth / count) * index,
       delay: Math.random() * 2,

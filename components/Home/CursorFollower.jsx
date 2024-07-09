@@ -26,14 +26,14 @@ const CursorFollower = () => {
         position: "fixed",
         left: "0",
         top: "-5px",
-        width: "15px", // Smaller width for a dot-like appearance
-        height: "15px", // Smaller height to match the width
+        width: "15px",
+        height: "15px",
         borderRadius: "50%",
-        backgroundColor: "#FFFFFF", // White color for the dot
+        backgroundColor: "#FFFFFF",
         zIndex: 9999,
         pointerEvents: "none",
-        boxShadow: "0 0 5px 1px #F0F0F0, 0 0 8px 2px #F0F0F0", // Optional: Adjusted shadow to match the white dot
-        transform: "translate3d(-5px, -5px, 0)", // Adjusted to center the smaller dot
+        boxShadow: "0 0 5px 1px #F0F0F0, 0 0 8px 2px #F0F0F0",
+        transform: "translate3d(-5px, -5px, 0)",
       }}
     />
   );

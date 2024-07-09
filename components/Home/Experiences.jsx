@@ -98,35 +98,6 @@ const Experience = () => {
     </motion.div>
   );
 
-  // <motion.div
-  //   classNameName="w-screen h-screen grid grid-rows-2 z-10"
-  //   initial={{ opacity: 0 }}
-  //   animate={{ opacity: 1 }}
-  //   transition={{ duration: 0.5 }}
-  //   style={{ gridTemplateRows: "auto 1fr" }} // Adjust grid-template-rows
-  // >
-  //   {/* First Row Content */}
-  //   <motion.div
-  //     classNameName="text-center flex flex-col justify-center"
-  //     initial={{ y: -50, opacity: 0 }}
-  //     animate={{ y: 0, opacity: 1 }}
-  //     transition={{ duration: 0.5 }}
-  //   >
-  //     Welcome to my
-  //     <h1 classNameName="text-4xl font-bold ml-2 text-white">Portfolio</h1>
-  //   </motion.div>
-  //   {/* Second Row Content - Image */}
-  //   <div classNameName="w-full h-full relative">
-  //     {" "}
-  //     {/* Ensure the div takes up remaining space */}
-  //     <Image
-  //       src="/images/home.JPG"
-  //       alt="home"
-  //       layout="fill" // Use layout="fill" to make the image fill the container
-  //       objectFit="cover" // Cover the container without losing aspect ratio
-  //     />
-  //   </div>
-  // </motion.div>
 };
 
 export default Experience;
