@@ -21,7 +21,8 @@ const Contacts = () => {
       className="relative flex min-h-screen flex-col  bg-[#020617] overflow-hidden px-8 text-gray-200 "
     >
       <div className="h-[10vh]"></div>
-      <section className="grid grid-cols-1 md:grid-cols-2 border-2 h-auto md:h-[70vh]">
+      <div className="absolute inset-0 z-8 h-full w-full  opacity-10 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px]"></div>
+      <section className="grid grid-cols-1 z-10 md:grid-cols-2 border-2 h-auto md:h-[70vh]">
         <div className="flex flex-col justify-between p-4 md:p-6 border-b md:border-b-0 md:border-r-2">
           <div>
             <h1 className="text-4xl md:text-6xl">
@@ -51,6 +52,13 @@ const Contacts = () => {
               >
                 Github
               </Link>
+              <a
+                download
+                href="./files/cv.pdf"
+                className="text-xl md:text-3xl font-semibold hover:font-bold"
+              >
+                CV
+              </a>
             </div>
             <FiArrowUpRight className="shrink-0 text-4xl md:text-5xl mt-4 md:mt-0" />
           </div>

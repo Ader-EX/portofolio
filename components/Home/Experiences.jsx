@@ -65,6 +65,7 @@ const Experience = () => {
       }}
       className="relative flex min-h-screen flex-col  items-start justify-center overflow-hidden bg-[#1d2949] px-8  text-gray-200"
     >
+      <div className="absolute inset-0 z-8 h-full w-full  opacity-10 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px]"></div>
       <div className="flex flex-col sm:flex-row gap-4 mt-[20rem] ">
         <div className="z-1 flex flex-col items-start">
           <h1 className="flex max-w-2xl gap-x-2 font-bold text-white text-3xl leading-tight text-transparent sm:text-5xl sm:leading-tight md:text-7xl md:leading-tight">
@@ -97,7 +98,6 @@ const Experience = () => {
       </div>
     </motion.div>
   );
-
 };
 
 export default Experience;

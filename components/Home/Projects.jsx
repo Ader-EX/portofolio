@@ -13,6 +13,13 @@ import Image from "next/image";
 import React, { use, useEffect, useRef, useState } from "react";
 import Picture1 from "../../public/images/new.jpg";
 import Picture2 from "../../public/images/box.jpg";
+import klc from "../../public/images/thumbnail/klc-akreditasi.jpg";
+import dig from "../../public/images/thumbnail/dignition.jpg";
+import estate from "../../public/images/thumbnail/estate.jpg";
+import movie from "../../public/images/thumbnail/movie.jpg";
+import perac from "../../public/images/thumbnail/perac.jpg";
+import peluang from "../../public/images/thumbnail/peluang.jpg";
+import food from "../../public/images/thumbnail/food.jpg";
 
 import { contain } from "three/src/extras/TextureUtils";
 import { FiArrowRight, FiArrowUpRight } from "react-icons/fi";
@@ -27,7 +34,7 @@ const Projects = () => {
       year: "©2024",
       description:
         "Made a web that is used to assess the feasibility of financial training programs organized by the Indonesian Ministry of Finance. This project used NextJS, NextAuth, and TailwindCSS.",
-      image: Picture1,
+      image: klc,
       direction: "l",
       link: "/",
     },
@@ -36,7 +43,7 @@ const Projects = () => {
       year: "©2024",
       description:
         "Made a website for a real estate company. This project used NextJS, Typescript, KindeAuth, Supabase, and MongoDB",
-      image: Picture1,
+      image: estate,
       direction: "r",
       link: "https://github.com/Ader-EX/Places-TS",
     },
@@ -45,7 +52,7 @@ const Projects = () => {
       year: "©2023",
       description:
         "Made a mobile app using React Native that shows a list of food and the details of the food",
-      image: Picture1,
+      image: food,
       direction: "l",
       link: "https://github.com/Ader-EX/Foodie-RN",
     },
@@ -54,7 +61,7 @@ const Projects = () => {
       year: "©2023",
       description:
         "Made a web for a franchise businesss e-commerce . This project used NextJS, Typescript, and Zod.",
-      image: Picture1,
+      image: peluang,
       direction: "r",
       link: "https://peluang.co",
     },
@@ -63,7 +70,7 @@ const Projects = () => {
       year: "©2023",
       description:
         "A website dedicated to UPN Veteran Jakarta's student club. Dignition is a Learning Management System with a goal to develop student skills",
-      image: Picture1,
+      image: dig,
       direction: "l",
       link: "https://dignition.androidupnvj.com",
     },
@@ -72,7 +79,7 @@ const Projects = () => {
       year: "©2023",
       description:
         "A website that uses MovieDB's data to show a list of movies and the details using NextJS",
-      image: Picture1,
+      image: movie,
       direction: "r",
       link: "https://layarkaca31-fadhil-arief-finpro.vercel.app",
     },
@@ -80,7 +87,7 @@ const Projects = () => {
       title: "Perac Coffee Mobile App ",
       year: "©2023",
       description: "A Java based mobile app for ordering coffee and drinks",
-      image: Picture1,
+      image: perac,
       direction: "l",
       link: "https://github.com/InMyDream21/Perac",
     },
@@ -127,7 +134,7 @@ const Projects = () => {
               ? "open"
               : "closed"
           }
-          className={`flex flex-col h-[73vh] hover:bg-[#12182b] transition duration-300 ease-in-out    pt-4 font-normal items-center  `}
+          className={`flex flex-col h-[58vh] hover:bg-[#12182b]  bg-[#020617] transition duration-300 ease-in-out    pt-4 font-normal items-center  `}
         >
           <Link
             href={project.link}
@@ -161,7 +168,13 @@ const Projects = () => {
           }
         >
           <Link href={project.link}>
-            <Image src={project.image} alt="" objectFit="cover" />
+            <Image
+              src={project.image}
+              alt=""
+              width={500}
+              height={300}
+              layout="responsive"
+            />
           </Link>
         </motion.div>
       </>
@@ -187,7 +200,13 @@ const Projects = () => {
           }
         >
           <Link href={project.link}>
-            <Image src={project.image} alt="" objectFit="cover" />
+            <Image
+              src={project.image}
+              alt=""
+              width={500}
+              height={300}
+              layout="responsive"
+            />
           </Link>
         </motion.div>
         <motion.div
@@ -204,7 +223,7 @@ const Projects = () => {
               ? "open"
               : "closed"
           }
-          className={`flex flex-col h-[73vh] hover:bg-[#12182b] transition duration-300 ease-in-out  pt-4 font-normal items-center  `}
+          className={`flex flex-col h-[73vh] hover:bg-[#12182b] bg-[#020617]  transition duration-300 ease-in-out  pt-4 font-normal items-center  `}
         >
           <Link
             href={project.link}
@@ -233,6 +252,7 @@ const Projects = () => {
       <div className=" ">
         <div className="h-[30vh]"></div>
         <div ref={container}>
+          <div className="absolute inset-0 z-8 h-full w-full  opacity-10 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px]"></div>
           <Slider
             src={Picture1}
             left={"-55%"}
@@ -255,7 +275,7 @@ const Projects = () => {
 
         <div className="h-[30vh]"></div>
         {projects.map((project, i) => (
-          <section key={i} className="grid grid-cols-1 md:grid-cols-2 ">
+          <section key={i} className="grid grid-cols-1 md:grid-cols-2   ">
             {project.direction === "l" ? (
               <>
                 <ContentLeft

@@ -83,45 +83,47 @@ const NewHome = () => {
     });
   }, []);
   return (
-    <motion.div
-      id="home"
-      style={{
-        backgroundImage,
-      }}
-      className="relative grid min-h-screen place-content-center overflow-hidden bg-[#1d2949] px-4  text-gray-200"
-    >
-      {" "}
-      <div className="relative z-1 flex flex-col items-start">
-        <h1 className="max-w-3xl font-bold flex gap-x-2 mb-4 text-white  text-3xl leading-tight text-transparent sm:text-5xl sm:leading-tight md:text-7xl md:leading-tight">
-          Welcome To My <br /> Web Portofolio
-          <FiArrowUpRight className="transition-transform max-w-3xl text-white hover:rotate-90 " />
-        </h1>
-        <motion.button
-          style={{
-            border,
-            boxShadow,
-          }}
-          whileHover={{
-            scale: 1.015,
-          }}
-          whileTap={{
-            scale: 0.985,
-          }}
-          className="group relative flex w-fit items-center gap-1.5 rounded-full bg-gray-950/10 px-4 py-2 text-gray-50 transition-colors hover:bg-gray-950/50"
-        >
-          Muhammad Fadhil Musyaffa
-          <FiArrowRight className="transition-transform group-hover:-rotate-45 group-active:-rotate-12" />
-        </motion.button>
-        <p className="my-6 max-w-xl text-base leading-relaxed md:text-lg md:leading-relaxed">
-          A passionate Web Developer. Proficient in Frontend with knowledge of
-          React, Next.js, and Tailwind CSS. A passionate learner, collaborative
-          and focused on creating impactful web experiences.
-        </p>
-      </div>
-      <div className="absolute inset-0 z-0">
-        <FallingStars />
-      </div>
-    </motion.div>
+    <>
+      <motion.div
+        id="home"
+        style={{
+          backgroundImage,
+        }}
+        className="relative grid min-h-screen place-content-center overflow-hidden bg-[#1d2949] px-4  text-gray-200"
+      >
+        <div className="absolute inset-0 z-8 h-full w-full  opacity-10 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px]"></div>
+        <div className="relative z-10 flex flex-col items-start">
+          <h1 className="max-w-3xl font-bold flex gap-x-2 mb-4 text-white  text-3xl leading-tight text-transparent sm:text-5xl sm:leading-tight md:text-7xl md:leading-tight">
+            Welcome To My <br /> Web Portofolio
+            <FiArrowUpRight className="transition-transform max-w-3xl text-white hover:rotate-90 " />
+          </h1>
+          <motion.button
+            style={{
+              border,
+              boxShadow,
+            }}
+            whileHover={{
+              scale: 1.015,
+            }}
+            whileTap={{
+              scale: 0.985,
+            }}
+            className="group relative flex w-fit items-center gap-1.5 rounded-full bg-gray-950/10 px-4 py-2 text-gray-50 transition-colors hover:bg-gray-950/50"
+          >
+            Muhammad Fadhil Musyaffa
+            <FiArrowRight className="transition-transform group-hover:-rotate-45 group-active:-rotate-12" />
+          </motion.button>
+          <p className="my-6 max-w-xl text-base leading-relaxed md:text-lg md:leading-relaxed">
+            A passionate Web Developer. Proficient in Frontend with knowledge of
+            React, Next.js, and Tailwind CSS. A passionate learner,
+            collaborative and focused on creating impactful web experiences.
+          </p>
+        </div>
+        <div className="absolute inset-0 z-0">
+          <FallingStars />
+        </div>
+      </motion.div>
+    </>
   );
 };
 
