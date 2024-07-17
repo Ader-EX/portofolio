@@ -13,6 +13,7 @@ const Navigation = ({ setIsActive }) => {
     { name: "Experience", link: "/#experience", src: "experience.jpeg" },
     { name: "Projects", link: "/#projects", src: "project.png" },
     { name: "Contact", link: "/#contact", src: "contact.png" },
+    { name: "CV", link: "./files/cv.pdf", src: "contact.png" },
   ];
   const [selectedLink, setSelectedLink] = useState({
     isActive: false,

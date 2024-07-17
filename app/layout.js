@@ -25,7 +25,7 @@ export default function RootLayout({ children }) {
             <Header />
           </div>
         </div>
-        <div className=" flex-grow pt-10 w-[100%] h-[100%] ">
+        <div className=" flex-grow pt-10 w-[100%] h-[100%] absolute z-0 ">
           {/* Padding top matches header height */}
           {children}
         </div>

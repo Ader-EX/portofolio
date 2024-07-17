@@ -7,15 +7,14 @@ import {
   animate,
 } from "framer-motion";
 import Image from "next/image";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState, memo } from "react";
 import { FiArrowUpRight, FiArrowRight } from "react-icons/fi";
 import { Stars } from "@react-three/drei";
 import { Shrikhand } from "next/font/google";
 import { Tulpen_One } from "next/font/google";
-const shrikhand = Shrikhand({ subsets: ["latin"], weight: ["400"] });
-const tulpen_One = Tulpen_One({ subsets: ["latin"], weight: ["400"] });
+import Link from "next/link";
 
-const FallingStar = ({ initialX, delay }) => {
+const FallingStar = memo(({ initialX, delay }) => {
   const duration = Math.random() * 10 + 20;
   return (
     <motion.div
@@ -39,8 +38,10 @@ const FallingStar = ({ initialX, delay }) => {
       }}
     />
   );
-};
-const FallingStars = ({ count = 70 }) => {
+});
+
+FallingStar.displayName = "FallingStar";
+const FallingStars = ({ count = 30 }) => {
   const [initialPositions, setInitialPositions] = useState([]);
 
   useEffect(() => {
@@ -50,6 +51,7 @@ const FallingStars = ({ count = 70 }) => {
     }));
     setInitialPositions(positions);
   }, [count]);
+
   return (
     <div
       style={{
@@ -70,8 +72,7 @@ const NewHome = () => {
   const COLORS = ["#910A67", "#FFA62F", "#dd335c", "#ce84cf"];
   const color = useMotionValue(COLORS[0]);
   const border = useMotionTemplate`1px solid ${color}`;
-  const colorText = useMotionTemplate`1px solid ${color}`;
-  const textShadow = useMotionTemplate`0px 0px 8px rgba(${color}, ${color}, ${color}, 1)`;
+
   const boxShadow = useMotionTemplate`0px 4px 24px ${color}`;
   const backgroundImage = useMotionTemplate`radial-gradient(125% 125% at 50% 0%, #0B0F1B 60%,${color})`;
   useEffect(() => {
@@ -110,8 +111,10 @@ const NewHome = () => {
             }}
             className="group relative flex w-fit items-center gap-1.5 rounded-full bg-gray-950/10 px-4 py-2 text-gray-50 transition-colors hover:bg-gray-950/50"
           >
-            Muhammad Fadhil Musyaffa
-            <FiArrowRight className="transition-transform group-hover:-rotate-45 group-active:-rotate-12" />
+            <Link href={"./files/cv.pdf"} className="flex gap-1.5">
+              Muhammad Fadhil Musyaffa
+              <FiArrowRight className="transition-transform group-hover:-rotate-45 group-active:-rotate-12 self-center" />
+            </Link>
           </motion.button>
           <p className="my-6 max-w-xl text-base leading-relaxed md:text-lg md:leading-relaxed">
             A passionate Web Developer. Proficient in Frontend with knowledge of
