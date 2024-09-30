@@ -45,7 +45,7 @@ const Projects = () => {
       year: "©2024",
       description:
         "Made a Fullstack website for a simple CRUD using EJS and Express.",
-      image: night,
+      image: shop,
       direction: "r",
       link: "https://github.com/Ader-EX/shop-products",
     },
