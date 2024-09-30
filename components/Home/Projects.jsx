@@ -20,6 +20,8 @@ import movie from "../../public/images/thumbnail/movie.jpg";
 import perac from "../../public/images/thumbnail/perac.jpg";
 import peluang from "../../public/images/thumbnail/peluang.jpg";
 import food from "../../public/images/thumbnail/food.jpg";
+import night from "../../public/images/thumbnail/night.jpg";
+import shop from "../../public/images/thumbnail/shop.jpg";
 
 import { contain } from "three/src/extras/TextureUtils";
 import { FiArrowRight, FiArrowUpRight } from "react-icons/fi";
@@ -30,13 +32,31 @@ import Link from "next/link";
 const Projects = () => {
   const projects = [
     {
+      title: "Movie Light",
+      year: "©2024",
+      description:
+        "Made a Fullstack website that reads movie data and edit their metadatas like actors, studio, series, etc. This project used React, FastAPI, and TailwindCSS.",
+      image: night,
+      direction: "l",
+      link: "https://github.com/Ader-EX/FARM-Movie",
+    },
+    {
+      title: "Shop Website",
+      year: "©2024",
+      description:
+        "Made a Fullstack website for a simple CRUD using EJS and Express.",
+      image: night,
+      direction: "r",
+      link: "https://github.com/Ader-EX/shop-products",
+    },
+    {
       title: "KLC - AKREDITASI",
       year: "©2024",
       description:
         "Made a web that is used to assess the feasibility of financial training programs organized by the Indonesian Ministry of Finance. This project used NextJS, NextAuth, and TailwindCSS.",
       image: klc,
       direction: "l",
-      link: "/",
+      link: "https://bppk.kemenkeu.go.id/akreditasi/",
     },
     {
       title: "Estates Website",
