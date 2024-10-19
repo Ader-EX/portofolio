@@ -67,7 +67,7 @@ const Experience = () => {
     >
       <div className="absolute inset-0 z-8 h-full w-full  opacity-10 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px]"></div>
       <div className="flex flex-col sm:flex-row gap-4 mt-[20rem] ">
-        <div className="z-1 flex flex-col items-start">
+        <div className="z-1 flex flex-col items-start w-2/4">
           <h1 className="flex max-w-2xl gap-x-2 font-bold text-white text-3xl leading-tight text-transparent sm:text-5xl sm:leading-tight md:text-7xl md:leading-tight">
             Experiences
             <FiArrowUpRight className="max-w-2xl text-white transition-transform hover:rotate-90" />
@@ -78,19 +78,19 @@ const Experience = () => {
             the diverse roles and challenges I have embraced.
           </p>
         </div>
-        <div className="flex-col flex gap-y-10">
+        <div className="flex-col flex gap-y-10 w-2/4">
           {experiences.map((experience, index) => (
             <div key={index} className="text-end">
               <div className="flex flex-wrap w-full justify-between ">
                 <FiArrowUpLeft className="max-w-lg" />
                 <div>
-                  <h3 className="text-xl font-bold">{experience.title}</h3>
-                  <h4 className="text-md font-medium my-2">
+                  <h3 className="text-2xl font-bold">{experience.title}</h3>
+                  <h4 className="text-xl font-medium my-2">
                     {experience.organization}
                   </h4>
                 </div>
               </div>
-              <p className="text-sm">{experience.description}</p>
+              <p className="text-lg">{experience.description}</p>
               <div className="flex w-full border-b-2 mt-6 rounded-lg"></div>
             </div>
           ))}

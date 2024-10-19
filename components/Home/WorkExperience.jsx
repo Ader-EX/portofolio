@@ -22,7 +22,6 @@ import peluang from "../../public/images/thumbnail/peluang.jpg";
 import food from "../../public/images/thumbnail/food.jpg";
 import night from "../../public/images/thumbnail/night.jpg";
 import shop from "../../public/images/thumbnail/shop.jpg";
-import quiz from "../../public/images/thumbnail/quizify.png";
 
 import { contain } from "three/src/extras/TextureUtils";
 import { FiArrowRight, FiArrowUpRight } from "react-icons/fi";
@@ -30,72 +29,38 @@ import { blur } from "@/app/header/anim";
 
 import Link from "next/link";
 
-const Projects = () => {
+const WorkExperience = () => {
   const projects = [
     {
-      title: "Quizify Web App",
+      title: "KLC - AKREDITASI",
       year: "©2024",
       description:
-        "Made a Fullstack website for a Quiz App using localStorage, Context, and a fully functional authorization.This project used React, FastAPI, and TailwindCSS.",
-      image: quiz,
-      direction: "r",
-      link: "https://github.com/Ader-EX/DOT-frontend",
-    },
-    {
-      title: "Movie Light",
-      year: "©2024",
-      description:
-        "Made a Fullstack website that reads movie data and edit their metadatas like actors, studio, series, etc. This project used React, FastAPI, and TailwindCSS.",
-      image: night,
+        "Made a web that is used to assess the feasibility of financial training programs organized by the Indonesian Ministry of Finance. This project used NextJS, NextAuth, and TailwindCSS.",
+      image: klc,
       direction: "l",
-      link: "https://github.com/Ader-EX/FARM-Movie",
-    },
-    {
-      title: "Fullstack Shop Website",
-      year: "©2024",
-      description:
-        "Made a Fullstack website for a simple CRUD using EJS and Express.",
-      image: shop,
-      direction: "r",
-      link: "https://github.com/Ader-EX/shop-products",
+      link: "https://bppk.kemenkeu.go.id/akreditasi/",
     },
 
     {
-      title: "Estates Website",
-      year: "©2024",
-      description:
-        "Made a website for a real estate company. This project used NextJS, Typescript, KindeAuth, Supabase, and MongoDB",
-      image: estate,
-      direction: "l",
-      link: "https://github.com/Ader-EX/Places-TS",
-    },
-    {
-      title: "React Native Food App",
+      title: "Peluang.co's Website",
       year: "©2023",
       description:
-        "Made a mobile app using React Native that shows a list of food and the details of the food",
-      image: food,
+        "Made a web for a franchise businesss e-commerce . This project used NextJS, Typescript, and Zod.",
+      image: peluang,
       direction: "r",
-      link: "https://github.com/Ader-EX/Foodie-RN",
+      link: "https://peluang.co",
+    },
+    {
+      title: "Dignition Learning Management System",
+      year: "©2023",
+      description:
+        "A website dedicated to UPN Veteran Jakarta's student club. Dignition is a Learning Management System with a goal to develop student skills",
+      image: dig,
+      direction: "l",
+      link: "https://dignition.androidupnvj.com",
     },
 
-    {
-      title: "Movie App Using MovieDB ",
-      year: "©2023",
-      description:
-        "A website that uses MovieDB's data to show a list of movies and the details using NextJS",
-      image: movie,
-      direction: "l",
-      link: "https://layarkaca31-fadhil-arief-finpro.vercel.app",
-    },
-    {
-      title: "Perac Coffee Mobile App ",
-      year: "©2023",
-      description: "A Java based mobile app for ordering coffee and drinks",
-      image: perac,
-      direction: "r",
-      link: "https://github.com/InMyDream21/Perac",
-    },
+    // Add more projects as needed
   ];
   const COLORS = ["#910A67", "#FFA62F", "#dd335c", "#ce84cf"];
   const color = useMotionValue(COLORS[0]);
@@ -129,7 +94,7 @@ const Projects = () => {
             setSelectedLink({ isActive: true, index: i });
           }}
           onMouseLeave={() => {
-            setSelectedLink({ isActive: false, index: null });
+            setSelectedLink({ isActive: false, index: null }); // Reset index to null on mouse leave
           }}
           initial="initial"
           variants={blur}
@@ -319,7 +284,7 @@ const Slider = ({ src, left, progress, direction }) => {
 const Phrase = ({ src }) => {
   return (
     <div className="flex gap-5 items-center">
-      <p className="text-[7.5vw]">Past Projects</p>
+      <p className="text-[7.5vw]">Work Projects</p>
       <span
         className="relative h-[7.5vw] aspect-[6/3] overflow-hidden"
         style={{
@@ -332,4 +297,4 @@ const Phrase = ({ src }) => {
   );
 };
 
-export default Projects;
+export default WorkExperience;

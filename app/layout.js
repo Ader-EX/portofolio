@@ -20,13 +20,11 @@ export default function RootLayout({ children }) {
       <body className={`  ${poppins.className} flex flex-col min-h-screen`}>
         <div className="flex-shrink-0  relative w-[100%] ">
           {" "}
-          {/* Assuming header height is 4rem/64px */}
           <div className="absolute top-0 w-[100%] z-10">
             <Header />
           </div>
         </div>
         <div className=" flex-grow pt-10 w-[100%] h-[100%] absolute z-0 ">
-          {/* Padding top matches header height */}
           {children}
         </div>
       </body>
