@@ -23,6 +23,7 @@ import food from "../../public/images/thumbnail/food.jpg";
 import night from "../../public/images/thumbnail/night.jpg";
 import shop from "../../public/images/thumbnail/shop.jpg";
 import quiz from "../../public/images/thumbnail/quizify.png";
+import wecare from "../../public/images/thumbnail/wecare.png";
 
 import { contain } from "three/src/extras/TextureUtils";
 import { FiArrowRight, FiArrowUpRight } from "react-icons/fi";
@@ -95,6 +96,15 @@ const Projects = () => {
       image: perac,
       direction: "r",
       link: "https://github.com/InMyDream21/Perac",
+    },
+    {
+      title: "We Care Booking App ",
+      year: "©2022",
+      description:
+        "A PHP based app that allows users to book doctors with an admin dashboard",
+      image: wecare,
+      direction: "l",
+      link: "https://github.com/SyuQyu/ProjectAkhirPemrogramanWeb",
     },
   ];
   const COLORS = ["#910A67", "#FFA62F", "#dd335c", "#ce84cf"];
