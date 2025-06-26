@@ -14,7 +14,13 @@ import { FiArrowUpRight, FiArrowRight, FiArrowUpLeft } from "react-icons/fi";
 const Experience = () => {
   const experiences = [
     {
-      title: "Front-End Developer",
+      title: "Back-End Developer Intern",
+      organization: "BNI Sekuritas",
+      description:
+        "Leveraging Java and Vertx,  designed and implemented an advanced KYC system with Zoloz facial recognition, built scalable backend APIs for role-based access, deployed automated JasperReports, and established real-time WebSocket notifications, driving operational improvements and data accessibility.",
+    },
+    {
+      title: "Front-End Developer Intern",
       organization: "Kementerian Keuangan",
       description:
         "Made a website for the Ministry of Finance using NextJS and Next Auth with 2 other front-end developers and 1 back-end developer.",
@@ -66,11 +72,11 @@ const Experience = () => {
       className="relative flex min-h-screen flex-col  items-start justify-center overflow-hidden bg-[#1d2949] px-8  text-gray-200"
     >
       <div className="absolute inset-0 z-8 h-full w-full  opacity-10 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px]"></div>
-      <div className="flex flex-col sm:flex-row gap-4 mt-[20rem] ">
-        <div className="z-1 flex flex-col items-start w-2/4">
-          <h1 className="flex max-w-2xl gap-x-2 font-bold text-white text-3xl leading-tight text-transparent sm:text-5xl sm:leading-tight md:text-7xl md:leading-tight">
+      <div className="flex flex-col sm:flex-row gap-4 mt-20 sm:mt-10">
+        <div className="z-1 flex flex-col items-start w-full sm:w-1/2">
+          <h1 className="flex items-center gap-x-2 font-bold text-white text-3xl leading-tight sm:text-5xl sm:leading-tight md:text-7xl md:leading-tight">
             Experiences
-            <FiArrowUpRight className="max-w-2xl text-white transition-transform hover:rotate-90" />
+            <FiArrowUpRight className="text-white transition-transform hover:rotate-90" />
           </h1>
 
           <p className="my-6 max-w-lg text-base leading-relaxed md:text-lg md:leading-relaxed">
@@ -78,19 +84,22 @@ const Experience = () => {
             the diverse roles and challenges I have embraced.
           </p>
         </div>
-        <div className="flex-col flex gap-y-10 w-2/4">
+
+        <div className="flex flex-col gap-y-10 w-full sm:w-1/2">
           {experiences.map((experience, index) => (
             <div key={index} className="text-end">
-              <div className="flex flex-wrap w-full justify-between ">
-                <FiArrowUpLeft className="max-w-lg" />
-                <div>
-                  <h3 className="text-2xl font-bold">{experience.title}</h3>
-                  <h4 className="text-xl font-medium my-2">
+              <div className="flex flex-wrap w-full justify-between items-center">
+                <FiArrowUpLeft className="text-lg sm:text-2xl" />
+                <div className="text-start sm:text-end">
+                  <h3 className="text-xl sm:text-2xl font-bold">
+                    {experience.title}
+                  </h3>
+                  <h4 className="text-lg sm:text-xl font-medium my-2">
                     {experience.organization}
                   </h4>
                 </div>
               </div>
-              <p className="text-lg">{experience.description}</p>
+              <p className="text-base sm:text-lg">{experience.description}</p>
               <div className="flex w-full border-b-2 mt-6 rounded-lg"></div>
             </div>
           ))}
