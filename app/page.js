@@ -7,6 +7,7 @@ import Footer from "@/components/Home/Footer";
 import { motion } from "framer-motion";
 import CursorFollower from "@/components/Home/CursorFollower";
 import WorkExperience from "@/components/Home/WorkExperience";
+import ProjectPage from "@/components/Home/ProjectPage";
 
 export default function Home() {
   const fadeIn = {
@@ -28,12 +29,14 @@ export default function Home() {
       <motion.div initial="hidden" animate="visible" variants={fadeIn}>
         <Projects />
       </motion.div>
+
       <motion.div initial="hidden" animate="visible" variants={fadeIn}>
         <Contacts />
       </motion.div>
       <motion.div initial="hidden" animate="visible" variants={fadeIn}>
         <Footer />
       </motion.div>
+
       <CursorFollower />
     </div>
   );
