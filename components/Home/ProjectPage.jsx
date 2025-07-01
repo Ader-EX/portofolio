@@ -40,6 +40,7 @@ import wecare from "../../public/images/thumbnail/wecare.png";
 import nirvana from "../../public/images/thumbnail/nirvana.png";
 import umiba from "../../public/images/thumbnail/umiba.png";
 import smasebelas from "../../public/images/thumbnail/smasebelas.png";
+import skripsi from "../../public/images/thumbnail/skripsi.png";
 import Link from "next/link";
 
 const personalProjects = [
@@ -53,7 +54,7 @@ const personalProjects = [
     lastUpdated: "2025-07-01",
     stars: 0,
     isPrivate: false,
-    image: quiz,
+    image: skripsi,
     link: "https://github.com/Ader-EX/skripsi",
   },
   {
